@@ -20,10 +20,12 @@ const balance = document.getElementById('balance');
     const totalBalance = inputBalance - totalExpense;
     balance.innerText = totalBalance;
 
-    const savingAmount = totalBalance + .20 ;
+    const saving = document.getElementById('saving-amount')
+    const newSaving = parseFloat(saving.value)
+    const savingAmount = (newSaving/100 ) * totalBalance;
     // document.getElementById("saving-amount").innerText = savingAmount;
 
-    document.getElementById("remain-balance").innerText =savingAmount;
+    document.getElementById("remain-balance").innerText = savingAmount;
 })
 
 
